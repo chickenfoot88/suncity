@@ -1,0 +1,518 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	color: #434343
+
+p
+	font-size: 1.2em
+
+a
+	color: $links
+	&:hover
+		color: $accent
+
+ul
+	margin: 0
+	padding: 0
+
+li
+	list-style-type: none
+
+h1, h2, h3, h4, h5, h6
+	font-family: "idealistSC", sans-serif
+	font-weight: normal
+	margin-top: 0
+
+h1, h2
+	font-size: 1.6em
+
+h2
+	color: #000
+
+h3
+	color: $alt-accent
+	text-transform: uppercase
+	font-size: 1.8em
+	z-index: 1
+	position: relative
+
+h4
+	font-family: 'opensans', sans-serif
+	font-weight: 600
+	margin-top: 20px
+	margin-bottom: 0
+	font-size: 1.2em
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+ul.check
+	font-size: 1.2em
+	margin: 25px 0
+	padding-left: 60px
+	li
+		color: $alt-accent
+		margin-top: 5px
+		padding: 5px 10px
+		position: relative
+		&::before
+			content: '\f00c'
+			display: block
+			font-family: "fontawesome"
+			left: -30px
+			position: absolute
+
+.green
+	color: $alt-accent
+
+.overlay
+	position: relative
+	&::before
+		background: #fff
+		content: ''
+		display: block
+		height: 100%
+		left: 0
+		opacity: .9
+		position: absolute
+		top: 0
+		width: 100%
+
+
+//basic buttons
+.button
+	background-color: $alt-accent
+	color: #fff
+	display: block
+	font-family: "idealistSC", sans-serif
+	font-size: 26px
+	padding: 20px 35px
+	text-align: center
+	transition: background-color .25s ease
+	line-height: 1
+
+	&:hover, &:focus
+		text-decoration: none
+		color: #fff
+
+	&:hover
+		background-color: lighten($alt-accent, 12%)
+
+	&:active
+		background-color: darken($alt-accent, 5%)
+
+.button-accent
+	background-color: $btn-accent
+	color: #fff
+	font-family: "idealistSC"
+	font-size: 16px
+	padding: 8px 30px
+	transition: background-color .25s ease
+	text-transform: uppercase
+	float: right
+
+	&:hover, &:focus
+		text-decoration: none
+		color: #fff
+
+	&:hover
+		background-color: darken($btn-accent, 8%)
+
+	&:active
+		background-color: darken($btn-accent, 20%)
+
+button[type=submit]
+	border: none
+
+
+section
+	padding-bottom: 65px
+	padding-top: 20px
+
+//custom styles
+
+// header
+
+.header
+	background: #fff
+	border-bottom: 4px solid $alt-accent
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		width: 42%
+		height: 100%
+		left: 0
+		top: 0
+		background: $bg
+	.logo
+		img
+			width: 160px
+	h1
+		margin: 6px 0
+		text-transform: uppercase
+		width: 350px
+
+	&-logo
+		padding-top: 15px
+		background: $bg
+		position: relative
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			width: 0
+			height: 0
+			top: 0
+			right: -120px
+			border: 90px solid transparent
+			border-left: 30px solid $bg
+
+	&-contacts
+		padding-top: 5px
+		background: #fff
+		position: relative
+		margin-left: 60px
+		.work-time-menu
+			display: none
+		ul
+			li
+				margin: 5px 0 10px
+				vertical-align: middle
+				a
+					color: $textcolor
+					text-decoration: none
+					transition: color .2s ease
+					display: inline-block
+					font-size: 1.1em
+					span
+						transition: color .2s ease
+					&:hover
+							color: $accent
+					&.work-time
+						&:hover
+							span
+								border-bottom: 2px solid $accent
+						&.active
+							color: $accent
+							span
+								border-bottom: 2px solid $accent
+					.fa
+						font-size: 1.5em
+						margin-right: 5px
+						margin-bottom: 5px
+						vertical-align: middle
+						&-sort-desc
+							font-size: 0.9em
+							margin-left: 5px
+							margin-top: -3px
+					.fa-map-marker
+						margin-bottom: 5px
+						float: left
+					&.phone
+						span
+							font-size: 1.3em
+
+	.work-time-menu
+		position: absolute
+		z-index: 1
+		background: #fff
+		padding: 0 10px
+		margin-top: -40px
+		border: 1px solid #e5e5e5
+		border-radius: 3px
+		box-shadow: 0 0 7px 1px #d3d3d3
+		&-header
+			font-weight: bold
+		.weekend
+			color: #cf4239
+		.divider
+			height: 1px
+			margin: 9px -10px
+			overflow: hidden
+			background-color: #e5e5e5
+
+
+
+//menu
+.main-menu
+	margin-top: 25px
+	width: 100%
+	.sf-menu
+		font-family: "idealist", sans-serif
+		margin-bottom: -4px
+		li
+			background: none
+			&.sfHover
+				background: none
+			&:hover, &:focus, &:active
+				background: none
+				> a
+						color: $accent
+			a
+				border: none
+				color: darken($textcolor, 20%)
+				font-size: 1.5em
+				padding: 0
+				padding: 8px 20px 8px 10px
+				transition: color .2s ease
+				.fa
+					font-size: 0.8em
+					margin-right: 10px
+		> li:hover
+				> a
+						border-bottom: 4px solid $accent
+						padding-bottom: 4px
+		ul
+			background: #fff
+			li
+				background: none
+				a
+					padding-left: 20px
+					padding-right: 20px
+				&:hover
+					background: lighten($bg, 2%)
+
+
+.main-content
+	background: url(../img/home_body_bg.jpg) no-repeat
+	background-position: center
+	background-size: cover
+	aside
+		.emergency
+			border: 4px solid $btn-accent
+			margin-top: 20px
+			text-align: center
+			background: #fff
+			padding: 22px 0 15px
+			font-family: "idealistSC", sans-serif
+			font-size: 1.6em
+			color: darken($textcolor, 25%)
+			span
+				text-transform: uppercase
+			a
+				color: inherit
+				text-decoration: none
+				font-size: 2.1em
+
+		.links
+			border: 2px solid $alt-accent
+			background: #fff
+			margin-top: 20px
+			padding-bottom: 15px
+			margin-bottom: 20px
+			span
+				padding: 10px 0
+				color: #fff
+				display: block
+				text-align: center
+				background: $alt-accent
+				font-family: "idealistSC", sans-serif
+				font-size: 1.2em
+				text-transform: uppercase
+			ul
+				padding-top: 25px
+				padding-left: 30px
+				li
+					line-height: 1.2
+					margin-bottom: 10px
+					a
+						color: $alt-accent
+						font-size: 0.9em
+
+.news
+	h4, p, .owl-pagination
+		padding-left: 10px
+	p
+		font-size: 1em
+		margin-top: 10px
+		line-height: 1.5
+	&-date
+		font-family: 'opensans', sans-serif
+		font-size: 0.8em
+		color: #a8a8a8
+
+
+	.owl-pagination
+		color: $alt-accent
+		padding-top: 40px
+		div
+			display: inline-block
+
+		.prev, .next, .first, .last, .owl-dot
+			width: 30px
+			height: 30px
+			float: left
+			margin-right: 5px
+			border: 2px solid $alt-accent
+			text-align: center
+			cursor: pointer
+			transition all 0.2s ease
+			&.active, &:hover
+				border: 2px solid $accent
+				color: $accent
+
+		.owl-dots
+			font-family: "idealist", sans-serif
+			float: left
+
+
+.contacts
+	background: url(../img/contacts_bg.jpg) no-repeat
+	background-size: cover
+	background-position: center
+	span
+		font-size: 1.2em
+	.main-form
+		form
+			margin-top: 25px
+		input, textarea
+			border: none
+			border-bottom: 3px solid darken($bg, 10%)
+			background: #fff
+			padding: 7px
+			padding-left: 15px
+			margin-bottom: 10px
+			width: 100%
+			transition: border-color .3s ease
+			&::placeholder
+				color: lighten($textcolor, 40%)
+			&:focus
+				border-color: $alt-accent
+		textarea
+			resize: none
+			background: $bg
+			height: 161px
+		button
+			margin-top: 5px
+
+	.map
+		margin-top: 25px
+
+	.contacts-info
+		margin-top: 45px
+		font-weight: 600
+		font-size: 1.1em
+		.fa
+			text-align: right
+			font-size: 1.2em
+			color: $alt-accent
+			margin-right: 25px
+		.fa-map-marker
+			margin-right: 23px
+		.fa-envelope
+			margin-right: 15px
+
+		li
+			margin-bottom: 5px
+
+
+footer
+	background-color: darken($bg, 60%)
+	padding: 20px 0
+	.footer-links
+		padding-top: 15px
+	a
+		color: #fff
+		font-family: "idealist", sans-serif
+		&:hover
+			color: #fff
+			text-decoration: none
+
+
+// Mobile Menu
+
+.mobile-mnu
+	color: #fff
+	background-color: $accent
+	cursor: pointer
+	position: relative
+	padding: 9px 15px 5px
+	z-index: 2
+	b
+		display: block
+		text-align: center
+		font-family: RobotoRegular, sans-serif
+		font-size: 1.1em
+		text-transform: uppercase
+
+.toggle-mnu
+	display: block
+	width: 28px
+	height: 28px
+	float: left
+
+	span:after, span::before
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $bg
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+	&.on span
+		background-color: transparent
+
+	&.on span:before
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after
+		transform: rotate(-45deg) translate(6px, -7px)
+
+
+#my-menu
+	a
+		.fa
+			display: none
+
+@import "media"

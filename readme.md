@@ -1,5 +1,5 @@
 # Сайт для управляющей компании "Солнечный город" #
-Сайт проекта: [Солнечный город](http://adel-ismagilov.ru/lessons/suncity/)
+Сайт проекта: [Солнечный город](http://adel-ismagilov.ru/projects/suncity/)
 ##### В проекте использовались: #####
 1. Task manager: [Gulp](https://gulpjs.com/)
 2. CSS preproccessor: [SASS](http://sass-lang.com/)
